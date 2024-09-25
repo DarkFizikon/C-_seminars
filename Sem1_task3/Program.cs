@@ -8,7 +8,7 @@ if ((num/100 > 0) && (num/100 <= 9))
     int a = num/100;
     int b = num%10;
     int sum = a + b;
-    Console.WriteLine("Сумма чисел = " + sum);
+    Console.WriteLine($"Сумма чисел = {sum}");
 }
 else
 {
