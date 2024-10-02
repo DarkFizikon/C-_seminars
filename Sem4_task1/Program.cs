@@ -1,11 +1,4 @@
-﻿Console.Write("Input array size: ");
-int size = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input min rnd num: ");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input max rnd num: ");
-int max = Convert.ToInt32(Console.ReadLine());
-
-int[] CreateArrayRndInt(int size, int min, int max)
+﻿int[] CreateArrayRndInt(int size, int min, int max)
 {
     int[] arr = new int[size];
     Random rnd = new Random();
@@ -58,6 +51,12 @@ bool IsPrime(int num)
     return true;
 }
 
+Console.Write("Input array size: ");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input min rnd num: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input max rnd num: ");
+int max = Convert.ToInt32(Console.ReadLine());
 int[] array = CreateArrayRndInt(size, min, max);
 ShowArray(array);
 int countPrime = CountPrimeNumbers(array);
