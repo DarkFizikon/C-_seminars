@@ -23,16 +23,17 @@ void ShowMatrix(int[,] matrix)
 }
 
 int SumMainDiag(int[,] matrix)
-{ int sum = 0;
-    for (int i = 0; i < matrix.GetLength(0); i ++)
+{
+    int sum = 0;
+    int minSize = matrix.GetLength(0);
+    if (minSize > matrix.GetLength(1))
     {
-        for (int j = 0; j < matrix.GetLength(1); j ++)
-        {
-            if (i == j)
-            {
-                sum = sum + matrix[i,j];
-            }
-        }
+        minSize = matrix.GetLength(1);
+    }
+    for (int i = 0; i < minSize; i++)
+    {
+
+        sum += matrix[i, i];
     }
     return sum;
 }
